@@ -18,7 +18,7 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [dataImage, setDataImage] = useState<ImagesType | {}>({});
+  const [dataImage, setDataImage] = useState<ImagesType | null>(null);
 
   const setImagesArray = (imagesArray: ImagesType[], page: number) => {
     setImages((prevImages) =>
