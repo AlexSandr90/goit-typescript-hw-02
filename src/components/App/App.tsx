@@ -8,18 +8,19 @@ import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import ImageGallery from '../ImageGallery/ImageGallery';
 import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn';
 import ImageModal from '../ImageModal/ImageModal';
+import { ImagesType } from './App.types';
 
 const App = () => {
   const [page, setPage] = useState(1);
   const [searchValue, setSearchValue] = useState('');
-  const [images, setImages] = useState([]);
+  const [images, setImages] = useState<ImagesType[]>([]);
   const [totalPages, setTotalPages] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [dataImage, setDataImage] = useState({});
+  const [dataImage, setDataImage] = useState<ImagesType | {}>({});
 
-  const setImagesArray = (imagesArray, page) => {
+  const setImagesArray = (imagesArray: ImagesType[], page: number) => {
     setImages((prevImages) =>
       page > 1 ? [...prevImages, ...imagesArray] : imagesArray
     );
