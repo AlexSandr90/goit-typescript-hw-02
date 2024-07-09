@@ -53,13 +53,13 @@ const App = () => {
     searchValue.length > 0 && fetchData();
   }, [searchValue, page]);
 
-  const pageCounter = () => {
+  const pageCounter = (): void => {
     if (totalPages > 0 && page < totalPages) {
       setPage((prevPage) => prevPage + 1);
     }
   };
 
-  const toggleModalOpen = () => {
+  const toggleModalOpen = (): void => {
     setIsModalOpen((prevState) => !prevState);
   };
 
