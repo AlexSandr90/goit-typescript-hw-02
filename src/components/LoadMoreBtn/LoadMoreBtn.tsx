@@ -1,7 +1,11 @@
 import classes from './LoadMoreBtn.module.css';
 import PropTypes from 'prop-types';
 
-const LoadMoreBtn = ({ pageCounter }) => {
+interface LoadMoreBtnProps {
+  pageCounter: () => void;
+}
+
+const LoadMoreBtn: React.FC<LoadMoreBtnProps> = ({ pageCounter }) => {
   return (
     <button className={classes.loadMoreBtn} onClick={pageCounter}>
       Load More
