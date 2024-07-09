@@ -11,13 +11,13 @@ import ImageModal from '../ImageModal/ImageModal';
 import { ImagesType } from './App.types';
 
 const App = () => {
-  const [page, setPage] = useState(1);
-  const [searchValue, setSearchValue] = useState('');
+  const [page, setPage] = useState<number>(1);
+  const [searchValue, setSearchValue] = useState<string>('');
   const [images, setImages] = useState<ImagesType[]>([]);
-  const [totalPages, setTotalPages] = useState(0);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [totalPages, setTotalPages] = useState<number>(0);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<boolean>(false);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [dataImage, setDataImage] = useState<ImagesType | null>(null);
 
   const setImagesArray = (imagesArray: ImagesType[], page: number) => {
