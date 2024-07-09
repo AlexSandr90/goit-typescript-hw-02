@@ -76,7 +76,7 @@ const App = () => {
         />
       )}
       {loading && images.length > 1 ? (
-        <Loader />
+        <Loader initial={loading} />
       ) : (
         images.length > 0 &&
         !loading && <LoadMoreBtn pageCounter={pageCounter} />

@@ -5,7 +5,7 @@ interface LoaderProps {
   initial: boolean;
 }
 
-const Loader: React.FC<LoaderProps> = ({ initial }) => {
+const Loader: React.FC<LoaderProps> = ({ initial = false }) => {
   return (
     <div className={initial ? classes.initialLoader : classes.loader}>
       <BallTriangle
